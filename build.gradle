@@ -1,0 +1,59 @@
+apply plugin: "java"
+apply plugin: 'com.google.protobuf'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.8'
+    }
+}
+group 'com.skw.audioserver'
+version '1.0-SNAPSHOT'
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+repositories {
+    mavenCentral()
+}
+jar {
+    manifestContentCharset 'utf-8'
+    metadataCharset 'utf-8'
+    manifest {
+        attributes "Main-Class": "com.skw.audioserver.audioserver.AudioServer"
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+
+
+dependencies {
+    compile 'io.grpc:grpc-netty-shaded:1.21.0'
+    compile 'io.grpc:grpc-protobuf:1.21.0'
+    compile 'io.grpc:grpc-stub:1.21.0'
+    compile group: 'org.mybatis', name: 'mybatis', version: '3.5.0'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.15'
+}
+
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.7.1"
+    }
+    plugins {
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.21.0'
+        }
+    }
+    //generateProtoTasks.generatedFilesBaseDir = "src"
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {
+             //   setOutputSubDir 'java'
+            }
+        }
+    }
+}

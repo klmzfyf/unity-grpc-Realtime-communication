@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package com.skw.protoBean;
+
+
+option java_multiple_files = true;
+
+//传入一个用户list。向这个list里的用户发送实时语音到服务器。
+service IAudioTransform {
+    rpc GetAudio(stream SendBean) returns (Ok){}
+    rpc SendAudio (AskReq) returns (stream Audio) {}
+}
+
+message SendBean {
+    repeated int32 nearPlayer=1;
+    int32 player = 2;
+    Audio audio = 3;
+}
+
+message Audio {
+    repeated float  a_message = 1;
+}
+
+message Ok {
+    string ok =1;
+}
+message AskReq {
+    int32 req = 1;
+}

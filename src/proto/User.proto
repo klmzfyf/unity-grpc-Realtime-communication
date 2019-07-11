@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package com.skw.userBean;
+
+
+option java_multiple_files = true;
+
+//传入一个用户list。向这个list里的用户发送实时语音到服务器。
+service UserController {
+    rpc register( UserRegisterBean) returns (RegisterResult){}
+    rpc login (UserLoginBean) returns (LoginResult) {}
+}
+
+message UserRegisterBean {
+
+    string name = 1;
+    string password = 2;
+}
+message UserLoginBean {
+    string name =1;
+    string password =2;
+}
+
+
+message RegisterResult {
+    int32 resultType = 1;
+    int32 id =2;
+    string name =3 ;
+}
+message LoginResult {
+    int32 resultType = 1;
+    int32 id =2;
+    string name =3 ;
+}
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace属性是名称空间，必须唯一 -->
+<mapper namespace="PlayerMapper">
+
+    <resultMap type="com.skw.audioserver.userserver.model.PlayerInfo" id="playInfo">
+
+        <id property="id" column="Id"/>
+        <result property="name" column="name"/>
+        <result property="password" column="password"/>
+    </resultMap>
+
+    <insert id="add" parameterType="com.skw.audioserver.userserver.model.PlayerInfo">
+        INSERT INTO unity.player (id, name, password) VALUES (#{id},#{name},#{password});
+    </insert>
+    <select id="select" parameterType="com.skw.audioserver.userserver.model.PlayerInfo" resultMap="playInfo">
+        select id,name,password from unity.player
+        where
+        name = #{name} and password = #{password}
+    </select>
+</mapper>

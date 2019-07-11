@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package com.skw.playerOperate;
+
+
+option java_multiple_files = true;
+
+
+service PlayerOperate {
+    rpc sendAndReceiveOperation(stream OnePlayerOperation) returns (stream AllPlayerOperation){}
+
+}
+message AllPlayerOperation{
+    repeated OnePlayerOperation playerOperation=1;
+}
+
+//客户端x发送过来的操作
+message OnePlayerOperation{
+    //指明是哪个用户发送过来的操作
+    int32 id =1 ;
+    //指明该用户发送该消息时所处的位置
+    Position Position =2 ;
+    MoveParameter parameter =3 ;
+    bool crouch =4 ;
+}
+
+message Position{
+    //unity客户端里的float*1000发送到这里
+    int32 x=1;
+    int32 y=2;
+    int32 z=3;
+}
+message MoveParameter{
+    //unity客户端系数*10
+    int32 x = 1;
+    int32 y = 2;
+    int32 z = 3;
+}
+
+
