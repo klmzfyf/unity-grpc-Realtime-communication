@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f107dc6d4c984c45bdafd3bb15f98f0, type: 3}
+  m_Name: t20-tutorial
+  m_EditorClassIdentifier: 
+  m_WindowTitle: Tutorials
+  m_TutorialTitle: Prefabs
+  m_LessonId: 48135
+  m_Version: 1.7
+  m_Scene: {fileID: 102900000, guid: c1d294aa7985b4ab593f1859fb3f949c, type: 3}
+  m_DefaultSceneCameraSettings:
+    m_CameraMode: 0
+    m_FocusMode: 0
+    m_Orthographic: 0
+    m_Size: 0
+    m_Pivot: {x: 0, y: 0, z: 0}
+    m_Rotation: {x: 0, y: 0, z: 0, w: 0}
+    m_FrameObject:
+      m_SceneGuid: 
+      m_GameObjectGuid: 
+      m_SerializedComponentType:
+        m_TypeName: 
+      m_ComponentIndex: 0
+      m_AssetObject: {fileID: 0}
+      m_Prefab: {fileID: 0}
+    m_Enabled: 0
+  m_ExitBehavior: 0
+  m_SkipTutorialBehavior: 0
+  m_AssetSelectedOnExit: {fileID: 0}
+  m_WelcomePage: {fileID: 0}
+  m_CompletedPage: {fileID: 0}
+  IsWelcomingPageShowing: 0
+  IsCompletedPageShowing: 0
+  m_Pages:
+    m_Items:
+    - {fileID: 11400000, guid: 0777edf9189a547e18ab0fcfaea47d11, type: 2}
+    - {fileID: 11400000, guid: aecaa0bed82064e2daf4a7206c39408b, type: 2}
+    - {fileID: 11400000, guid: bde882b1b657c447796e2991ac452f09, type: 2}
+    - {fileID: 11400000, guid: 5b18a9da009bb4764b6252f219d4904c, type: 2}
+    - {fileID: 11400000, guid: c816406f799514d7992aa769cb723b78, type: 2}
+    - {fileID: 11400000, guid: e5f7d61fc8892404b82d8f69941f99b8, type: 2}
+    - {fileID: 11400000, guid: 3dcbbf2f1ec7f4525a035f54c2a00b34, type: 2}
+    - {fileID: 11400000, guid: bce1a21b6f6f14061a238610bf873971, type: 2}
+    - {fileID: 11400000, guid: cfbc57ac6dcfb44108197ec5b7b245a9, type: 2}
+    - {fileID: 11400000, guid: c9508148a5d424707b0d7b44868511e9, type: 2}
+    - {fileID: 11400000, guid: fdc7fe0a0f70e4866901a3896a7585c1, type: 2}
+    - {fileID: 11400000, guid: 8a9208181a93e458ba92476fa6072d4c, type: 2}
+    - {fileID: 11400000, guid: 1199c24b3e32d492a94eb1b8f3834654, type: 2}
+    - {fileID: 11400000, guid: dfe0d5ea4d6604eba9d04dcdec764419, type: 2}
+    - {fileID: 11400000, guid: 8c440a407e49b48c1b66e5896f3ca38c, type: 2}
+    - {fileID: 11400000, guid: 0851d718eed8c4005a3e318796ab4013, type: 2}
+    - {fileID: 11400000, guid: 16f446eec5f234637b9ada5d61bf5d1b, type: 2}
+  m_WindowLayout: {fileID: 102900000, guid: b8ef853f9120e4d4a8853a67adab7102, type: 3}
