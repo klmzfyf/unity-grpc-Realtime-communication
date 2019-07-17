@@ -46,7 +46,7 @@
     在本模拟器中，只要你的言论吸引人。周围就会慢慢聚集很多人。可以让用户更有交流的欲望。
 
 ## 3.技术架构
-
+![index](https://github.com/klmzfyf/unity-grpc-Realtime-communication/blob/master/picture/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE.png)
 
 
 
