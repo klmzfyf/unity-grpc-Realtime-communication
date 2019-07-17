@@ -10,6 +10,8 @@
   6.总结
 ## 1.产品功能
   场景模拟：
+      ![index](https://github.com/klmzfyf/unity-grpc-Realtime-communication/blob/master/picture/communication.PNG)
+  
       服务器：新建一个特定场景【xx歌星主题ktv】。场景内可播放歌曲。
       用户A【歌迷A】加入。A在场景内可以随意走动。
       用户B【歌迷B】加入。B在场景内也可以随意走动。然后B走向A。当AB之间的距离小于一定值时，AB之间可以进行语音通信。
