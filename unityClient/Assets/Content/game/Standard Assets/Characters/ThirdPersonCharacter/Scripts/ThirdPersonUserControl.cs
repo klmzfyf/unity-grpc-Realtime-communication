@@ -17,6 +17,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private PlayerOperator playerOperator;
         public GameObject playerPrefeb;
 
+        private int difference = 2000;
         private void Start()
         {
             // get the transform of the main camera
@@ -131,6 +132,20 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         }
         private void movePlayer(GameObject player,OnePlayerOperation playerOperation)
         {
+
+            Debug.Log("客户端"+player.transform.position);
+
+            Debug.Log("服务器"+playerOperation.Position);
+            //判断角色的位置和发送过来的位置有没有差别。若有则先强制更新。
+            if (Mathf.Abs((int)player.transform.position.x*1000 - playerOperation.Position.X )> difference ||
+                // Mathf.Abs((int)player.transform.position.y * 1000 - playerOperation.Position.Y )> difference ||
+                Mathf.Abs((int)player.transform.position.z * 1000 - playerOperation.Position.Z) >difference)
+            {
+                player.transform.position = new Vector3((float)playerOperation.Position.X / 1000f, (float)playerOperation.Position.Y / 1000f,
+                    (float)playerOperation.Position.Z / 1000f);
+                Debug.Log("更新了");
+            }
+
             //使该角色移动
             Vector3 server_move = new Vector3((float)playerOperation.Parameter.X / 10,
                                     (float)playerOperation.Parameter.Y / 10,
